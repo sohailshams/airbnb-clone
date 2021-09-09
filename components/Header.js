@@ -14,7 +14,7 @@ function Header() {
       </div>
       <div>
         <input type="text" placeholder="Start your search" />
-        <SearchIcon />
+        <SearchIcon className="h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer" />
       </div>
     </header>
   );
