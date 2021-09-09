@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { SearchIcon } from '@heroicons/react/solid';
 
 function Header() {
   return (
@@ -10,6 +11,10 @@ function Header() {
           objectFit="contain"
           objectPosition="left"
         />
+      </div>
+      <div>
+        <input type="text" placeholder="Start your search" />
+        <SearchIcon />
       </div>
     </header>
   );
