@@ -27,8 +27,8 @@ function Header() {
       </div>
       <div className="flex space-x-4 items-center justify-end text-gray-500">
         <p>Become a host</p>
-        <GlobeAltIcon className="h-6" />
-        <div className="flex">
+        <GlobeAltIcon className="h-6 cursor-pointer" />
+        <div className="flex items-center space-x-2 border-2 p-2 rounded-full">
           <MenuAlt1Icon className="h-6" />
           <UserAddIcon className="h-6" />
         </div>
