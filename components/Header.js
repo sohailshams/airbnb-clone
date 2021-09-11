@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { SearchIcon } from '@heroicons/react/solid';
+import { GlobeAltIcon, SearchIcon } from '@heroicons/react/solid';
 
 function Header() {
   return (
@@ -19,6 +19,10 @@ function Header() {
           placeholder="Start your search"
         />
         <SearchIcon className="hidden md:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer md:mx-2" />
+      </div>
+      <div className="flex space-x-4 items-center justify-end text-gray-500">
+        <p>Become a host</p>
+        <GlobeAltIcon className="h-6" />
       </div>
     </header>
   );
