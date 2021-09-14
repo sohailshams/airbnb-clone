@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Baner from '../components/Baner';
 import Header from '../components/Header';
+import LiveCard from '../components/LiveCard';
 import SmallCard from '../components/SmallCard';
 
 export default function Home({ exploreData, cardsData }) {
@@ -30,6 +31,9 @@ export default function Home({ exploreData, cardsData }) {
         </section>
         <section>
           <h2 className="text-4xl font-semibold p-8">Live Anywhere</h2>
+          {cardsData?.map(({ img, title }) => (
+            <LiveCard key={img} img={img} title={title} />
+          ))}
         </section>
       </main>
     </div>
