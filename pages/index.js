@@ -31,7 +31,7 @@ export default function Home({ exploreData, cardsData }) {
         </section>
         <section>
           <h2 className="text-4xl font-semibold p-8">Live Anywhere</h2>
-          <div className="flex space-x-3 overflow-scroll">
+          <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3">
             {cardsData?.map(({ img, title }) => (
               <LiveCard key={img} img={img} title={title} />
             ))}
