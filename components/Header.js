@@ -6,10 +6,20 @@ import {
   UserAddIcon,
 } from '@heroicons/react/solid';
 import { useState } from 'react';
+import 'react-date-range/dist/styles.css'; // main style file
+import 'react-date-range/dist/theme/default.css'; // theme css file
+import { DateRangePicker } from 'react-date-range';
 
 function Header() {
   const [searchInput, setSearchInput] = useState('');
-  console.log(searchInput);
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
+
+  const selectionRanges = {
+    startDate: startDate,
+    endDate: endDate,
+    key: 'Selection',
+  };
 
   return (
     <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10">
@@ -39,6 +49,12 @@ function Header() {
           <UserAddIcon className="md:h-6 h-4" />
         </div>
       </div>
+
+      {searchInput && (
+        <div>
+          <DateRangePicker ranges={[selectionRanges]} />
+        </div>
+      )}
     </header>
   );
 }
