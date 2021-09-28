@@ -78,6 +78,10 @@ function Header() {
               className="w-12 pl-2 text-lg text-red-400 outline-none"
             />
           </div>
+          <div className="flex">
+            <button className="flex-grow text-gray-500">Cancel</button>
+            <button className="flex-grow text-red-500">Search</button>
+          </div>
         </div>
       )}
     </header>
