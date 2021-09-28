@@ -15,6 +15,7 @@ function Header() {
   const [searchInput, setSearchInput] = useState('');
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
+  const [numberOfGuests, setNumberOfGuests] = useState(1);
 
   const handleSelect = (ranges) => {
     setStartDate(ranges.selection.startDate);
@@ -70,6 +71,9 @@ function Header() {
             </h2>
             <UsersIcon className="h-5" />
             <input
+              value={numberOfGuests}
+              onChange={(e) => setNumberOfGuests(e.target.value)}
+              min={1}
               type="number"
               className="w-12 pl-2 text-lg text-red-400 outline-none"
             />
